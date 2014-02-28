@@ -24,6 +24,7 @@ set softtabstop=2
 set expandtab
 set tabstop=2
 set cursorline
+map <F8> :NERDTreeToggle<CR>
 
 " Highlight trailing whitespaces and delete all with <F5>
 match ErrorMsg '\s\+$'
@@ -47,3 +48,4 @@ Bundle 'FuzzyFinder'
 " non-GitHub repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/nerdtree'
