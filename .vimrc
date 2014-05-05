@@ -1,6 +1,6 @@
 set nocompatible
-filetype indent plugin on
 syntax on
+filetype indent plugin on
 set backspace=indent,eol,start
 set mouse=a
 set whichwrap+=<,>,[,]
@@ -30,6 +30,8 @@ map <F8> :NERDTreeToggle<CR>
 match ErrorMsg '\s\+$'
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
+colorscheme grb256
+
 " Line number color, highlight current line
 highlight LineNr ctermfg=grey
 
@@ -47,5 +49,8 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non-GitHub repos
 Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdtree'
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-fireplace'
+Bundle 'guns/vim-clojure-highlight'
+Bundle 'kien/rainbow_parentheses.vim'

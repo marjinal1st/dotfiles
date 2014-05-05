@@ -45,7 +45,7 @@ ZSH_THEME="amuse"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby)
+plugins=(git rails ruby fuck git flow)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,14 +66,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-PATH=$PATH:$HOME/.rvm/bin
+export SCALA_HOME=/opt/scala
+export PATH=$PATH:$HOME/.rvm/bin:$SCALA_HOME/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-alias cl="clear"
-alias up="sudo apt-get update"
-alias ug="sudo apt-get upgrade"
-alias dug="sudo apt-get dist-upgrade"
-alias difco="git diff --color"
-alias difca="git diff --color --cached"
-alias resco="git reset HEAD && git clean -fd && git checkout -- ."
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/Android\ Bundle/sdk/platform-tools:~/Java/play-framework
+source ~/.dotfiles/.aliases
+[ -s "/home/marjinal1st/.nvm/nvm.sh" ] && . "/home/marjinal1st/.nvm/nvm.sh" # This loads nvm
