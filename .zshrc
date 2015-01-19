@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="amuse"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
@@ -45,7 +45,7 @@ ZSH_THEME="amuse"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby fuck git flow)
+plugins=(git rails ruby fuck git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,9 +66,12 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-export SCALA_HOME=/opt/scala
-export PATH=$PATH:$HOME/.rvm/bin:$SCALA_HOME/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/Android\ Bundle/sdk/platform-tools:~/Java/play-framework
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/.bin:~/.local/bin
+export PATH=$PATH:/usr/lib/postgresql/9.3/bin:~/.activator
 source ~/.dotfiles/.aliases
-[ -s "/home/marjinal1st/.nvm/nvm.sh" ] && . "/home/marjinal1st/.nvm/nvm.sh" # This loads nvm
+echo "\n"
+screenfetch
+export LANGUAGE=tr_TR.UTF-8
+export LC_ALL=tr_TR.UTF-8
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
