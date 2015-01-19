@@ -20,3 +20,4 @@ alias aptsearch="sudo apt-cache search"
 alias shutup='sudo $(fc -l -n -1)'
 alias elastic=~/Ruby/elasticsearch-1.2.1/bin/elasticsearch
 alias cm="cmake CMakeLists.txt && make"
+alias vi="vim"
