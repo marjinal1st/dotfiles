@@ -66,12 +66,28 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+export WORKON_HOME=~/.virtualenvs
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/.bin:~/.local/bin
-export PATH=$PATH:/usr/lib/postgresql/9.3/bin:~/.activator
 source ~/.dotfiles/.aliases
 echo "\n"
 screenfetch
 export LANGUAGE=tr_TR.UTF-8
 export LC_ALL=tr_TR.UTF-8
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/lib64
+alias betty="~/betty/main.rb"
+export NVM_DIR="/home/marjinal1st/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source /home/marjinal1st/.gvm/scripts/gvm
+export GOPATH=$HOME/GO/Workspace
+export PATH=$PATH:$GOPATH/bin
+export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/home/marjinal1st/.nvm/v0.11.15/lib/node_modules
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+export CURL_CA_BUNDLE=~/.cacert.pem
+export PYENV_ROOT="$HOME/.pyenv"
+export PYTHONPATH="/usr/local/lib/python3/dist-packages"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

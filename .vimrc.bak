@@ -15,14 +15,11 @@ Plugin 'fatih/vim-go'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'hynek/vim-python-pep8-indent'
 
 call vundle#end()
 syntax on
-filetype on
 filetype plugin indent on
 set backspace=indent,eol,start
 set mouse=a
@@ -51,14 +48,12 @@ set t_Co=256
 set regexpengine=1
 set exrc
 set secure
-set foldmethod=indent
-set foldlevel=99
 
 let g:Powerline_symbols = "fancy"
 
 map <F8> :NERDTreeToggle<CR>
 set pastetoggle=<F2>
-" autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | wincmd p | endif
+autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | wincmd p | endif
 let g:NERDTreeChDirMode=2
 
 " CtrlP settings
@@ -77,6 +72,3 @@ highlight LineNr ctermfg=grey
 autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent
 autocmd Filetype c setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent
 autocmd Filetype cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 autoindent
-
-" let g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$' }
-let g:ctrlp_custom_ignore = 'node_modules'

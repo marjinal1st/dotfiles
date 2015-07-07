@@ -10,7 +10,7 @@ alias cleanup="sudo apt-get clean && sudo apt-get autoclean && sudo apt-get auto
 alias pgup="sudo service postgresql start"
 alias pgdown="sudo service postgresql stop"
 alias pgstatus="sudo service postgresql status"
-alias fcl="fortune | cowsay -f tux | lolcat"
+alias fcl="fortune | cowsay -f tux"
 alias nukelast="git reset --soft HEAD~1"
 alias resetlast="git reset --soft HEAD~1"
 
@@ -20,4 +20,7 @@ alias aptsearch="sudo apt-cache search"
 alias shutup='sudo $(fc -l -n -1)'
 alias elastic=~/Ruby/elasticsearch-1.2.1/bin/elasticsearch
 alias cm="cmake CMakeLists.txt && make"
-alias vi="vim"
+# alias vi="vim"
+alias p3doc="cd /usr/share/doc/python3.4/html && python3 -m http.server && cd ~"
+alias reloadzsh="source ~/.zshrc"
+alias xc="xclip -selection clipboard"
